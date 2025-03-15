@@ -3,169 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cours Création de Site Web</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
-    <style>
-        body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
-    background-color: #f4f4f4;
-}
-.container {
-    max-width: 800px;
-    margin: auto;
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-h1, h2 {
-    color: #0056b3;
-}
-.code-block {
-    background: #222;
-    color: white;
-    padding: 10px;
-    border-radius: 5px;
-    position: relative;
-}
-.copy-btn {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background: #00b894;
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    cursor: pointer;
-    border-radius: 5px;
-}
-.copy-btn:hover {
-    background: #008f72;
-}
-    </style>
+    <title>Joto Page</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>📚 Cours Complet pour Créer un Site Web</h1>
-        <p>Apprends à créer un site avec <strong>HTML, CSS, JavaScript et Laravel</strong>.</p>
 
-        <!-- Introduction -->
-        <section>
-            <h2>📌 1. Introduction à la Création de Sites Web</h2>
-            <p>Types de sites web :</p>
-            <ul>
-                <li><strong>Sites statiques</strong> (HTML, CSS, JavaScript pur)</li>
-                <li><strong>Sites dynamiques</strong> (avec une base de données et un backend)</li>
-                <li><strong>Applications web</strong> (SPA, PWA, API REST...)</li>
-            </ul>
-        </section>
+    <h1>Bienvenue sur Joto</h1>
+    <p>Ceci est un exemple de page avec HTML, CSS et JavaScript.</p>
 
-        <!-- HTML -->
-        <section>
-            <h2>📌 2. HTML – Structure de base</h2>
-            <p>Un fichier HTML basique :</p>
-            <div class="code-block">
-                <pre><code class="language-html">
-&lt;!DOCTYPE html&gt;
-&lt;html lang="fr"&gt;
-&lt;head&gt;
-    &lt;meta charset="UTF-8"&gt;
-    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-    &lt;title&gt;Mon Site Web&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-    &lt;h1&gt;Bienvenue !&lt;/h1&gt;
-    &lt;p&gt;Ceci est un paragraphe.&lt;/p&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-                </code></pre>
-                <button class="copy-btn" onclick="copyCode(this)">Copier</button>
-            </div>
-        </section>
+    <img src="image.jpg" alt="Une belle image" width="300">
 
-        <!-- CSS -->
-        <section>
-            <h2>📌 3. CSS – Mise en page et styles</h2>
-            <p>Un exemple de CSS :</p>
-            <div class="code-block">
-                <pre><code class="language-css">
-body {
-    background-color: #f4f4f4;
-    font-family: Arial, sans-serif;
-}
-h1 {
-    color: blue;
-}
-                </code></pre>
-                <button class="copy-btn" onclick="copyCode(this)">Copier</button>
-            </div>
-        </section>
+    <button onclick="afficherMessage()">Cliquez-moi</button>
 
-        <!-- JavaScript -->
-        <section>
-            <h2>📌 4. JavaScript – Interactivité</h2>
-            <p>Exemple d’un script JS :</p>
-            <div class="code-block">
-                <pre><code class="language-js">
-document.getElementById("testBtn").addEventListener("click", function() {
-    alert("Bouton cliqué !");
-});
-                </code></pre>
-                <button class="copy-btn" onclick="copyCode(this)">Copier</button>
-            </div>
-            <button id="testBtn">Clique-moi</button>
-        </section>
+    <script src="script.js"></script>
 
-        <!-- Laravel -->
-        <section>
-            <h2>📌 5. Backend avec Laravel (PHP)</h2>
-            <p>Créer une route dans Laravel :</p>
-            <div class="code-block">
-                <pre><code class="language-php">
-Route::get('/bonjour', function () {
-    return "Bonjour, Laravel !";
-});
-                </code></pre>
-                <button class="copy-btn" onclick="copyCode(this)">Copier</button>
-            </div>
-        </section>
-
-        <!-- SEO et Déploiement -->
-        <section>
-            <h2>📌 6. SEO & Déploiement</h2>
-            <p>Optimiser un site pour Google :</p>
-            <ul>
-                <li>Utiliser des balises <code>&lt;meta&gt;</code> optimisées</li>
-                <li>Améliorer la vitesse avec des images compressées</li>
-                <li>Créer un <code>sitemap.xml</code> pour Google</li>
-            </ul>
-        </section>
-
-        <!-- Déploiement -->
-        <section>
-            <h2>📌 7. Hébergement et mise en ligne</h2>
-            <p>Héberger un site HTML/CSS sur Vercel :</p>
-            <div class="code-block">
-                <pre><code class="language-bash">
-npm install -g vercel
-vercel
-                </code></pre>
-                <button class="copy-btn" onclick="copyCode(this)">Copier</button>
-            </div>
-        </section>
-    </div>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
-    <script>
-        function copyCode(button) {
-    let code = button.previousElementSibling.innerText;
-    navigator.clipboard.writeText(code).then(() => {
-        alert("Code copié !");
-    }).catch(err => {
-        console.error("Erreur de copie :", err);
-    });
-}
-    </script>
 </body>
 </html>
